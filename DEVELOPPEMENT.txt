@@ -1,79 +1,27 @@
-================================================================================
-COMMANDES DE DÉVELOPPEMENT - Site Internet Portfolio
-================================================================================
+﻿====================================================
+  COMMANDES GIT — Portfolio Baptiste Cadio
+====================================================
 
-1. INSTALLATION INITIALE DES DÉPENDANCES
-================================================================================
-npm install
-
-Description: Installe toutes les dépendances du projet (Sass, Bulma, etc.)
-À faire une seule fois au démarrage du projet.
+Dépôt GitHub : https://github.com/baptistecadio/baptistecadio.github.io.git
+Site en ligne : https://baptistecadio.github.io
 
 
-2. COMPILATION SCSS → CSS (Avec surveillance)
-================================================================================
-npm run sass
+--- METTRE À JOUR LE SITE ---
 
-Description: Compile automatiquement les fichiers SCSS en CSS et surveille 
-les modifications. À garder actif pendant le développement.
-Fichiers surveillés: scss/main.scss et ses imports
-Sortie: css/main.css
+Depuis le dossier "site internet" dans le terminal :
 
+  git add .
+  git commit -m "Description de ce que tu as changé"
+  git push
 
-3. SCAN DES MÉDIAS (Unique)
-================================================================================
-npm run scan-media
-
-Description: Analyse tous les dossiers de médias définis dans projects.json
-et met à jour la liste des fichiers disponibles.
-À exécuter une fois ou quand des fichiers médias sont ajoutés/supprimés.
+Le site se met à jour automatiquement sur GitHub Pages (~1 minute).
 
 
-4. SURVEILLANCE DES MÉDIAS (Continu)
-================================================================================
-npm run watch-media
+--- VÉRIFIER L'ÉTAT DES FICHIERS ---
 
-Description: Surveille les dossiers de médias en continu et met à jour 
-automatiquement la liste des fichiers. À garder actif pendant le développement
-si vous ajoutez/modifiez des images/vidéos.
+  git status
 
 
-5. WORKFLOW COMPLET DE DÉVELOPPEMENT
-================================================================================
+--- VOIR L'HISTORIQUE DES COMMITS ---
 
-Terminal 1 - Compilation SCSS:
-  npm run sass
-
-Terminal 2 - Surveillance des médias (optionnel):
-  npm run watch-media
-
-Terminal 3 - Serveur local (optionnel):
-  // Utiliser un serveur local comme Live Server ou Python
-  // VS Code: Extension Live Server
-  // Ou en ligne de commande: python -m http.server 8000
-
-
-6. CHECKLIST AVANT DE COMMENCER
-================================================================================
-□ Exécuter: npm install
-□ Lancer Terminal 1: npm run sass
-□ Lancer Terminal 2: npm run watch-media (si modification médias)
-□ Lancer le serveur local dans le navigateur
-
-
-7. EXTENSIONS RECOMMANDÉES VS CODE
-================================================================================
-- Live Server (pour serveur local)
-- Sass/SCSS (pour surlignage SCSS)
-- Prettier (formatage)
-
-
-8. FICHIERS IMPORTANTS
-================================================================================
-- scss/main.scss : Fichier principal SCSS (importe variables et custom)
-- css/main.css : Fichier CSS généré (ne pas éditer directement)
-- js/projects.json : Configuration des projets et médias
-- js/scan-media.js : Script de scan des médias
-
-
-================================================================================
+  git log --oneline
