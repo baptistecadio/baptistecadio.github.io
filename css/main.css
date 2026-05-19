@@ -23286,7 +23286,10 @@ body.page-portfolio {
 }
 
 /* Filtres */
-.gallery-filters { margin-bottom: clamp(2rem, 4vw, 3rem); }
+.gallery-filters {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  overflow: visible !important;
+}
 .gallery-filters ul {
   display: flex;
   flex-wrap: wrap;
@@ -23295,6 +23298,7 @@ body.page-portfolio {
   border-bottom: none;
   padding: 0;
   margin: 0;
+  overflow: visible !important;
 }
 .gallery-filters li { list-style: none; }
 .gallery-filters a {
