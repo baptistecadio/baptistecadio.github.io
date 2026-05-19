@@ -1,0 +1,21 @@
+{
+  "name": "site-internet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/main.scss css/main.css",
+    "scan-media": "node js/scan-media.js",
+    "watch-media": "node js/scan-media.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^1.0.4",
+    "sass": "^1.94.2"
+  }
+}
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Baptiste Cadio</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="page-portfolio">
+  <div id="header"></div>
+  <main class="site-main">
+    <section id="portfolio" class="section-portfolio">
+      <div class="section-inner">
+
+        <header class="section-header">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-header__title">Mes projets</h2>
+        </header>
+
+        <!-- Barre de filtres -->
+        <nav class="gallery-filters tabs is-toggle is-centered is-small">
+          <ul>
+            <li class="is-active">
+              <a href="#" data-gallery-filter="photo">Photographie</a>
+            </li>
+            <li>
+              <a href="#" data-gallery-filter="graphisme">Graphisme</a>
+            </li>
+            <li>
+              <a href="#" data-gallery-filter="audiovisuel">Audiovisuel</a>
+            </li>
+            <li>
+              <a href="#" data-gallery-filter="communication">Communication</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="gallery__wrapper">
+          <!-- Le contenu est généré dynamiquement par JS -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <div id="footer" data-partial-path="../partials/footer.html"></div>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

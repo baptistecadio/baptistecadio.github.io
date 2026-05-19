@@ -1,0 +1,251 @@
+[
+    {
+        "id": "mondial_foot",
+        "date": "2026-05-16",
+        "category": "photo",
+        "title": "FOOTBALL",
+        "subtitle": "Mondiale pupilles - Combrit",
+        "thumbnail": "../images/mondial/6-j2.webp",
+        "description": [
+            "En tant que bénévole, j’ai réalisé la couverture photographique du Mondial Pupilles, accueilli notamment sur le centre de Combrit.",
+            "Il s’agit d’un tournoi international de football destiné aux équipes U13, réunissant des clubs venus du monde entier, tels que l’Union québécoise ou le FC Metz.",
+            "Cette expérience m’a permis de pratiquer la photographie sportive dans un contexte d’événement international, en capturant l’intensité des matchs et les émotions des jeunes joueurs."
+        ],
+        "mediaFolder": "../images/mondial/",
+        "media": [
+            "../images/mondial/1-j1.webp",
+            "../images/mondial/10-j1.webp",
+            "../images/mondial/11-j1.webp",
+            "../images/mondial/12-j2.webp",
+            "../images/mondial/15-j2.webp",
+            "../images/mondial/5-j2.webp",
+            "../images/mondial/6-j2.webp",
+            "../images/mondial/7-j2.webp",
+            "../images/mondial/8-j1.webp",
+            "../images/mondial/DSC08933.webp",
+            "../images/mondial/DSC09168.webp",
+            "../images/mondial/DSC09429.webp"
+        ]
+    },
+    {
+        "id": "racc",
+        "date": "2026-03-29",
+        "category": "photo",
+        "title": "HANDBALL",
+        "subtitle": "Racing Athlétic Club et Cheminot",
+        "thumbnail": "../images/racc/DSC07001.webp",
+        "description": [
+            "Réalisation de prises de vue pour le club de handball Racing Athlétic Club et Cheminot.",
+            "Cette expérience m’a permis de découvrir la photographie sportive sur le terrain, en capturant l’intensité du jeu, les actions rapides et l’ambiance des matchs, cela a constituéune première expérience dans cet univers."
+        ],
+        "mediaFolder": "../images/racc/",
+        "media": [
+            "../images/racc/DSC06060.webp",
+            "../images/racc/DSC06071.webp",
+            "../images/racc/DSC06125.webp",
+            "../images/racc/DSC06159.webp",
+            "../images/racc/DSC06170.webp",
+            "../images/racc/DSC06172.webp",
+            "../images/racc/DSC06191.webp",
+            "../images/racc/DSC06198.webp",
+            "../images/racc/DSC06210.webp",
+            "../images/racc/DSC06218.webp",
+            "../images/racc/DSC06295.webp",
+            "../images/racc/DSC06301.webp",
+            "../images/racc/DSC06358.webp",
+            "../images/racc/DSC06366.webp",
+            "../images/racc/DSC06400.webp",
+            "../images/racc/DSC06427.webp",
+            "../images/racc/DSC06432.webp",
+            "../images/racc/DSC06472.webp",
+            "../images/racc/DSC06494.webp",
+            "../images/racc/DSC06563.webp",
+            "../images/racc/DSC06583.webp",
+            "../images/racc/DSC06689.webp",
+            "../images/racc/DSC06756.webp",
+            "../images/racc/DSC06806.webp",
+            "../images/racc/DSC07001.webp",
+            "../images/racc/DSC07230.webp",
+            "../images/racc/DSC07234.webp",
+            "../images/racc/DSC07347.webp",
+            "../images/racc/DSC07356.webp",
+            "../images/racc/DSC07419.webp"
+        ]
+    },
+    {
+        "id": "fce",
+        "date": "2026-03-29",
+        "category": "photo",
+        "title": "BÉNÉVOLES PHOTOGRAPHES",
+        "subtitle": "Festival du cinéma espagnol de Nantes",
+        "thumbnail": "../images/fce/DSC05369-Enhanced-NR.webp",
+        "description": [
+            "J’ai eu l’opportunité de participer comme photographe bénévole au Festival du Cinéma Espagnol de Nantes, une expérience rendue possible grâce à la confiance de l’équipe organisatrice.",
+            "Cette première immersion sur un événement culturel d’envergure m’a beaucoup apporté, tant sur le plan humain que photographique. Intégré à une équipe chaleureuse, j’ai pu couvrir différents moments du festival tout au long de la semaine, tout en apprenant aux côtés d’un photographe professionnel expérimenté, qui m’a partagé son regard et plusieurs techniques du métier."
+        ],
+        "mediaFolder": "../images/fce/",
+        "media": [
+            "../images/fce/DSC05220-Enhanced-NR.webp",
+            "../images/fce/DSC05240.webp",
+            "../images/fce/DSC05292.webp",
+            "../images/fce/DSC05308.webp",
+            "../images/fce/DSC05324.webp",
+            "../images/fce/DSC05367-Enhanced-NR.webp",
+            "../images/fce/DSC05369-Enhanced-NR.webp",
+            "../images/fce/DSC05463-Enhanced-NR.webp",
+            "../images/fce/DSC05501-2.webp",
+            "../images/fce/DSC05520.webp",
+            "../images/fce/DSC05538.webp",
+            "../images/fce/DSC05577.webp",
+            "../images/fce/DSC05622.webp"
+        ]
+    },
+    {
+        "id": "shooting-photo",
+        "date": "2025-09-05",
+        "category": "photo",
+        "title": "SHOOTING PHOTO",
+        "subtitle": "Combrit sainte marine football club",
+        "thumbnail": "../images/shoot_combrit/DSC05155.jpg",
+        "description": [
+            "Le Combrit Sainte-Marine Football Club m’a confié une mission en tant qu’assistant photographe pour un shooting destiné à accompagner le lancement de leur nouveau maillot.",
+            "Les photographies produites ont ensuite été utilisées dans la communication officielle du club sur leurs réseaux sociaux"
+        ],
+        "mediaFolder": "../images/shoot_combrit/",
+        "media": [
+            "../images/shoot_combrit/DSC05148.jpg",
+            "../images/shoot_combrit/DSC05150.jpg",
+            "../images/shoot_combrit/DSC05153.jpg",
+            "../images/shoot_combrit/DSC05155.jpg",
+            "../images/shoot_combrit/DSC05156.jpg",
+            "../images/shoot_combrit/DSC05158.jpg",
+            "../images/shoot_combrit/DSC05159.jpg",
+            "../images/shoot_combrit/DSC05168.jpg",
+            "../images/shoot_combrit/DSC05172.jpg",
+            "../images/shoot_combrit/DSC05176.jpg",
+            "../images/shoot_combrit/DSC05178.jpg",
+            "../images/shoot_combrit/DSC05179.jpg",
+            "../images/shoot_combrit/DSC05190.jpg",
+            "../images/shoot_combrit/DSC05192.jpg"
+        ]
+    },
+    {
+        "id": "awenzer",
+        "date": "2026-02-01",
+        "category": "graphisme",
+        "title": "Logo",
+        "subtitle": "Création d'un logo pour une chaîne Youtube",
+        "thumbnail": "../images/logo/7FBEC41E-3E50-40D0-AC09-F75BC8331AA7.jpeg",
+        "description": [
+            "Le vidéaste Awenzer m’a confié la création de son logo dans le cadre de la refonte de son identité visuelle.",
+            "Après une phase de recherche et de croquis, le concept retenu a été vectorisé sur Adobe Illustrator. La première proposition a directement été validée, ce qui a permis d’aboutir rapidement à une identité cohérente avec son univers et son image.",
+            "Ce projet a marqué ma première collaboration rémunérée en tant qu’indépendant, une étape importante qui m’a permis de concrétiser une prestation graphique complète, de la conception jusqu’à la livraison finale."
+        ],
+        "mediaFolder": "../images/logo/",
+        "media": [
+            "../images/logo/7FBEC41E-3E50-40D0-AC09-F75BC8331AA7.jpeg",
+            "../images/logo/CAF3B683-0512-42E8-BE7B-BB442D8F324F.jpeg"
+        ]
+    },
+    {
+        "id": "atable",
+        "date": "2024-12-15",
+        "category": "graphisme",
+        "title": "À Table !",
+        "subtitle": "Création d'une charte graphique",
+        "thumbnail": "../images/atable/logo - Copie.jpg",
+        "description": [
+            "Lors de mon année d’alternance à Pontivy Communauté, l’une de mes missions principales a été de concevoir l’identité visuelle et la charte graphique du programme A TABLE !",
+            "L’objectif était de créer une identité forte tout en restant cohérente avec l’univers graphique de Pontivy Communauté, afin de conserver une continuité avec la communication institutionnelle. Après plusieurs phases d’échanges et de validation avec mes collègues, responsables et élus, le projet a abouti à un résultat final abouti et satisfaisant.",
+            "Les livrables comprenaient la création d’un logo, d’un visuel de kakemono ainsi qu’une charte graphique complète, me permettant de piloter un projet de communication visuelle de sa conception jusqu’à sa validation finale."
+        ],
+        "mediaFolder": "../images/atable/",
+        "media": [
+            "../images/atable/kakemono-A TABLE,_page-0001.jpg",
+            "../images/atable/logo - Copie.jpg",
+            "../images/atable/logo_niveaux de gris.png",
+            "../images/atable/logo_noir.jpg"
+        ]
+    },
+    {
+        "id": "pc_affichage",
+        "date": "2025-08-31",
+        "category": "graphisme",
+        "title": "Affichages - Infographies - Flyers",
+        "subtitle": "Pontivy Communauté",
+        "thumbnail": "../images/Logo_PC.jpg",
+        "description": [
+            "Mon alternance à Pontivy Communauté m’a permis de réaliser de nombreux supports graphiques, tels que des flyers, affiches et infographies, pour répondre à différents besoins de communication.",
+            "Ces projets variés m’ont permis de renforcer mes compétences techniques en création graphique, notamment sur les outils de conception, tout en développant ma créativité et ma capacité à adapter un visuel à différents publics et objectifs de communication."
+        ],
+        "mediaFolder": "../images/pc_affichage/",
+        "media": [
+            "../images/pc_affichage/Animations environnement 2025 - Affiche A3 - Martin Pêcheur_page-0001.jpg",
+            "../images/pc_affichage/Design sans titre.jpg",
+            "../images/pc_affichage/abi.jpg",
+            "../images/pc_affichage/fiche ass mat (2).jpg",
+            "../images/pc_affichage/flyer_club nature_A5.jpg"
+        ]
+    },
+    {
+        "id": "doc",
+        "date": "2025-04-15",
+        "category": "audiovisuel",
+        "title": "Patatouille en Vadrouille",
+        "subtitle": "Documentaire sur la création du livre",
+        "thumbnail": "../images/patatouille_en_vadrouille/_IMG_7742.JPG",
+        "description": [
+            "Lors de mon alternance à Pontivy Communauté, j’ai réalisé un documentaire de 5 minutes autour de la création du livre Patatouille en vadrouille, intégré à la campagne de communication du projet.",
+            "Ce livre, écrit et illustré par les enfants des centres de loisirs du territoire avec l’accompagnement d’une écrivaine et d’une illustratrice, avait pour objectif de valoriser le patrimoine local à travers leur regard et leur imagination. Le documentaire devait retranscrire l’esprit du projet, mettre en lumière les différentes étapes de création ainsi que les personnes qui y ont contribué.",
+            "J’ai mené ce projet en totale autonomie, avec carte blanche sur la direction créative : prises de vue, écriture du scénario, interviews, prise de son, montage vidéo et animations en motion design. Cette réalisation m’a permis de gérer l’ensemble de la chaîne de production audiovisuelle, de la conception à la post-production.",
+            "Le film a ensuite été diffusé en avant-première lors du vernissage du projet, venant accompagner la présentation officielle du livre et valoriser le travail collectif mené autour de cette initiative. Cela reste mon meilleur souvenir de mon aventure dans la communauté de commune, avoir les retours positifs des enfants et de leurs familles sur notre travail a été une grande fierté."
+        ],
+        "videos": [
+            {
+                "id": "x_tGvgQOapg",
+                "url": "https://www.youtube.com/watch?v=x_tGvgQOapg",
+                "title": "Patatouille en Vadrouille"
+            }
+        ]
+    },
+    {
+        "id": "teaser",
+        "date": "2025-04-20",
+        "category": "audiovisuel",
+        "title": "FEDE RÉSEAUX",
+        "subtitle": "Teaser de l'évènement",
+        "thumbnail": "../images/federeseaux/1756198127530.jpeg",
+        "description": [
+            "J’ai réalisé un teaser pour l’événement annuel FEDE RÉSEAUX de la collectivité de Pontivy Communauté, destiné à accompagner la campagne de communication.",
+            "J’étais en charge du montage ainsi que de la création des animations et éléments de motion design réalisés à la main. Ce projet m’a permis de produire un contenu dynamique et attractif, en cohérence avec les objectifs de communication de l’événement, tout en renforçant mes compétences en post-production et en animation."
+        ],
+        "videos": [
+            {
+                "id": "fede_reseaux",
+                "url": "https://www.linkedin.com/posts/pontivy-communaut%C3%A9_pontivy-federeseaux-reseau-activity-7369398911171612672-Znne?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEDezzABnSC2AQYuPGHumeWPq_d30Tjerf4",
+                "title": "FedeReseaux - teaser 2025"
+            }
+        ]
+    },
+    {
+        "id": "patatetouille",
+        "date": "2025-04-15",
+        "category": "communication",
+        "title": "Patatouille en Vadrouille",
+        "subtitle": "Campagne de communication",
+        "thumbnail": "../images/patatouille_en_vadrouille/_IMG_7742.JPG",
+        "description": [
+            "J’ai participé à la campagne de communication du projet Patatouille en vadrouille, une initiative culturelle portée par Pontivy Communauté. Ce projet consistait à créer un livre jeunesse imaginé et illustré par les enfants des centres de loisirs du territoire, accompagnés d’une écrivaine et d’une illustratrice, afin de valoriser le patrimoine local à travers leur regard.",
+            "En parallèle du documentaire détaillé présenté dans la partie audiovisuelle, j’ai assuré plusieurs missions de communication : couverture photographique des différentes étapes du projet, alimentation des réseaux sociaux et du site internet pour suivre son évolution, ainsi que l’aide à l’organisation du vernissage. J’ai également réalisé certaines prises de vue de l’exposition photographique.",
+            "Enfin, j’ai participé à la mise en place de cette exposition lors du vernissage, avant qu’elle ne soit ensuite déplacée dans les médiathèques du territoire, afin de prolonger la diffusion du projet auprès du public."
+        ],
+        "mediaFolder": "../images/patatouille_en_vadrouille/",
+        "media": [
+            "../images/patatouille_en_vadrouille/ALBUM_Patatouille en vadrouille_impression_par planche_page-0001.jpg",
+            "../images/patatouille_en_vadrouille/Screenshot 2026-04-16 160011.png",
+            "../images/patatouille_en_vadrouille/_IMG_7013.JPG",
+            "../images/patatouille_en_vadrouille/_IMG_7742.JPG",
+            "../images/patatouille_en_vadrouille/_IMG_7750.JPG"
+        ]
+    }
+]

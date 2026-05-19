@@ -1,0 +1,1239 @@
+// ===============================
+// 1. Variables globales (espacements fluides)
+// ===============================
+
+// Petite échelle d'espacement responsive
+$space-xxs: clamp(0.25rem, 0.4vw, 0.5rem);
+$space-xs: clamp(0.5rem, 0.8vw, 1rem);
+$space-sm: clamp(0.75rem, 1.2vw, 1.5rem);
+$space-md: clamp(1rem, 2vw, 2rem);
+$space-lg: clamp(1.5rem, 3vw, 3rem);
+$space-xl: clamp(2rem, 4vw, 4rem);
+
+// Padding par défaut pour les sections (basé sur profil-card)
+$section-padding-y: $space-xl; // max ≈ 4rem, min ≈ 2rem
+$section-padding-x: $space-lg; // max ≈ 3rem, min ≈ 1.5rem
+
+// Marges verticales par défaut pour les textes
+$text-margin-bottom: $space-sm;
+
+// ===============================
+// 2. Mixins
+// ===============================
+
+@mixin section-padding {
+  padding: $section-padding-y $section-padding-x;
+}
+
+// ===============================
+// 3. Reset léger + base
+// ===============================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+// Marges normalisées pour les textes
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: $text-margin-bottom;
+  padding: 0;
+}
+
+// ===============================
+// 4. Typographie
+// ===============================
+
+h1 {
+  font-family: inherit;
+  font-size: clamp(4.5rem, 6.5vw, 6.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+h2 {
+  font-family: inherit;
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+h3 {
+  font-family: inherit;
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  line-height: 1.2;
+}
+
+p {
+  font-family: inherit;
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+  font-weight: 300;
+}
+
+// ===============================
+// 5. Layout global des sections
+// ===============================
+
+section {
+  @include section-padding; // toutes les sections ont un padding fluide
+}
+
+// Si tu veux retirer le padding d’une section :
+.no-padding {
+  padding: 0;
+}
+
+// ===============================
+// header
+// ===============================
+
+/* Couleur des trois barres du burger */
+.navbar-burger span {
+  background-color: white !important;
+}
+
+/* Couleur des barres quand il passe en croix (état .is-active) */
+.navbar-burger.is-active span {
+  background-color: white !important;
+}
+
+// ===============================
+// 6. Grid du top (hero)
+// ===============================
+
+.top-grid {
+  // on retire le padding de section pour garder le hero full width
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh auto; // apropos s’adapte à son contenu
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom,
+      #050509 0%,
+      #0e141c 30%,
+      #27313d 60%,
+      #5f6a79 100%);
+}
+
+// ===============================
+// 7. Bloc profil (image)
+// ===============================
+
+.profil {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  z-index: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 4px white) drop-shadow(0 0 4px white) drop-shadow(0 0 6px white);
+  }
+}
+
+// ===============================
+// 8. Carte profil (texte principal)
+// ===============================
+
+.profil-card {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  // Padding fluide basé sur le système global
+  padding: $section-padding-y $section-padding-x;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.hero-cover__buttons {
+  a {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+// ===============================
+// 9. Boutons du hero
+// ===============================
+
+.hero-cover__buttons {
+  @extend .buttons; // Bulma ou autre
+  margin-top: $space-xxs;
+  gap: clamp(0.5rem, 1vw, 0.9rem);
+
+  .button {
+    padding-inline: clamp(1.5rem, 3vw, 2.5rem);
+    padding-block: clamp(0.7rem, 1.4vw, 1rem);
+    border-radius: 999px;
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    font-weight: 600;
+
+    &.is-primary {
+      background: #00d1b2;
+      border-color: #00d1b2;
+      color: #fff;
+    }
+
+    &.is-light {
+      background: #00d1b2;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+
+// ===============================
+// 10. Bloc "À propos"
+// ===============================
+
+.apropos {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  background-color: #00d1b2;
+  padding-bottom: 150px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  // padding responsive
+  padding: $section-padding-y $section-padding-x;
+
+  >* {
+    grid-column: 2 / 3;
+  }
+}
+
+// ===============================
+// 11. Responsive
+// ===============================
+
+@media (max-width: 960px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh auto;
+    justify-items: center;
+    /* centre horizontalement le contenu du grid */
+    position: relative;
+    /* pour gérer les z-index proprement si besoin */
+  }
+
+  .profil {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 1;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    /* derrière la carte */
+  }
+
+  .profil-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    /* même “case” du grid → superposition */
+    z-index: 2;
+    /* devant l’image */
+    align-items: center;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+
+  }
+
+  .apropos {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+// ===============================
+// 12. Section "Expériences"
+// ===============================
+
+.experiences {
+  background: linear-gradient(to bottom,
+      #27313d 0%,
+      #0e141c 100%,
+    );
+  color: #fff;
+  padding-bottom: 150px;
+  padding-top: 150px;
+
+  clip-path: polygon(0 0, // haut gauche droit
+      100% 0, // haut droit droit
+      100% calc(100% - 5vw), // bas droit remonté → crée la diagonale
+      0 100% // bas gauche normal
+    );
+}
+
+
+.experiences__title {
+  text-align: center;
+  margin-bottom: $space-lg; // espace sous le titre de section
+}
+
+.experiences__grid {
+  // si tu veux resserrer un peu le contenu sur grands écrans, optionnel :
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+// Carte d'expérience
+.experience-card {
+  background: rgba(14, 20, 28, 0.98);
+  border-radius: 0.75rem;
+  padding: $space-md;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Header de la carte (type + lieu)
+.experience-card__header {
+  margin-bottom: $space-sm;
+}
+
+// Type d’expérience (alternance, stage…)
+.experience-card__type {
+  // on s’appuie sur la base de <p> mais on raffine un peu
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: $space-xxs;
+}
+
+// Lieu / structure
+.experience-card__place {
+  // h3 a déjà ta typo globale (petit, uppercase), donc on override un peu
+  font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: normal;
+  text-transform: none;
+  opacity: 1;
+  margin-bottom: 0; // déjà géré par $text-margin-bottom, on peut le neutraliser ici si besoin
+}
+
+// Liste des missions
+.experience-card__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: $space-sm;
+
+    &:not(:last-child) {
+      margin-bottom: $space-xxs;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 999px;
+      background: #00d1b2; // couleur Bulma primary
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// ===============================
+// Responsive pour la section expériences
+// ===============================
+
+@media (max-width: 960px) {
+  .experiences {
+    // même logique que le reste de ton site
+    padding: $space-lg $space-md;
+  }
+
+  .experience-card {
+    padding: $space-sm;
+  }
+
+  .experiences__title {
+    margin-bottom: $space-md;
+  }
+}
+
+// ===============================
+// 13. Mes compétences
+// ===============================
+
+.skills {
+  background-color: #ffffff; // ← fond blanc                // texte foncé
+}
+
+.skills__title {
+  text-align: center;
+  margin-bottom: $space-lg;
+  color: #3E4855;
+}
+
+// Layout
+.skills__grid {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+// ===============================
+// Cards (version claire)
+// ===============================
+
+.skills-card {
+  background: #f3f4f6; // gris très clair, contraste doux sur fond blanc
+  border-radius: 0.75rem;
+  padding: $space-md;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.skills-card__title {
+  text-align: center; // OK : on peut centrer sans casser le style
+  margin-bottom: $space-sm; // petit renfort de contraste
+}
+
+.skills-card__intro {
+  margin-bottom: $space-md;
+
+  p {
+    color: #333; // lisible sur blanc
+  }
+}
+
+// ===============================
+// Barres de compétences (version claire)
+// ===============================
+
+.skills-card__bars {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.skill-bar__track {
+  width: 100%;
+  background: #e5e7eb; // gris clair (style Tailwind slate-200)
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar__value {
+  padding: $space-xxs $space-sm;
+  background: #00d1b2; // bleu principal (garde ton identité visuelle)
+  color: #fff;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+}
+
+// ===============================
+// Responsive
+// ===============================
+
+@media (max-width: 960px) {
+  .skills__title {
+    margin-bottom: $space-md;
+  }
+
+  .skills-card {
+    padding: $space-sm;
+  }
+}
+
+/* ===========================
+   THEME SOMBRE – UNIQUEMENT CETTE PAGE
+   (n’affecte pas les items)
+   =========================== */
+body.page-portfolio {
+  min-height: 100vh;
+  background: linear-gradient(180deg,
+      #050509 0%,
+      #0e141c 50%,
+      #27313d 100%,
+    );
+}
+
+/* on évite de forcer des styles sur les items :
+   on ne cible QUE la section et les filtres */
+body.page-portfolio .gallery {
+  background-color: transparent;
+  /* au lieu de #ffffff */
+  color: rgba(255, 255, 255, 0.88);
+  /* texte général de la section */
+}
+
+/* ======================================================
+   TON SCSS D’ORIGINE (inchangé)
+   ====================================================== */
+
+.gallery {
+  background-color: #ffffff;
+  color: #111;
+}
+
+.gallery-filters {
+  margin-bottom: $space-lg;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    padding-inline: $space-md;
+    border-radius: 999px;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-weight: 500;
+  }
+
+  &.tabs.is-toggle li.is-active a {
+    background-color: #00d1b2;
+    color: #fff;
+    border-color: #00d1b2;
+  }
+}
+
+.gallery-filters.tabs.is-toggle li a,
+.gallery-filters.tabs.is-toggle li:first-child a,
+.gallery-filters.tabs.is-toggle li:last-child a {
+  border-radius: 999px; // même forme pour tous
+}
+
+.gallery-filters.tabs.is-toggle li.is-active a {
+  background-color: #00d1b2;
+  color: #fff;
+  border-color: #00d1b2;
+}
+
+.gallery__wrapper {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item__thumb {
+  position: relative;
+  width: 100%;
+  padding-top: 66%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: $space-sm;
+
+  // Image de fond
+  .gallery-item__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  // Zoom au survol
+  &:hover .gallery-item__bg {
+    transform: scale(1.05);
+  }
+
+  // Conteneur contenu (titre + sous-titre)
+  .gallery-item__content {
+    position: absolute;
+    left: $space-sm;
+    bottom: $space-sm;
+    right: $space-sm;
+    z-index: 2;
+    pointer-events: none;
+
+    // Reset titre dans le contexte
+    .gallery-item__title {
+      position: static;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  // Sous-titre
+  .gallery-item__subtitle {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+  }
+}
+
+// Couleurs de test
+.gallery-item__thumb--blue {
+  background: linear-gradient(135deg, #1f47b9, #5c8dff);
+}
+
+.gallery-item__thumb--green {
+  background: linear-gradient(135deg, #00d1b2, #27f3cf);
+}
+
+.gallery-item__thumb--orange {
+  background: linear-gradient(135deg, #ff9800, #ffb547);
+}
+
+.gallery-item__thumb--purple {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.gallery-item__thumb--red {
+  background: linear-gradient(135deg, #ef4444, #f97373);
+}
+
+.gallery-item__thumb--teal {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+// Overlay
+.gallery-item__thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+
+// Titre sur l’image
+.gallery-item__title {
+  position: absolute;
+  left: $space-sm;
+  bottom: $space-sm;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+// ===============================
+// 9. Responsive
+// ===============================
+
+@media (max-width: 768px) {
+  .gallery-filters {
+    ul {
+      display: flex;
+      flex-direction: column;
+      /* deviens vertical */
+      gap: $space-xs;
+      border-bottom: none;
+    }
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+      /* chaque bouton fait toute la largeur */
+      text-align: center;
+      border-radius: 0.75rem;
+      /* joli look compact */
+      padding-block: $space-sm;
+    }
+  }
+}
+
+/* ======================================================
+   OVERRIDES SOMBRES – FILTRES UNIQUEMENT (scopés)
+   (n’affecte PAS les .gallery-item*)
+   ====================================================== */
+
+body.page-portfolio .gallery-filters a {
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+body.page-portfolio .gallery-filters a:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+body.page-portfolio .gallery-filters.tabs.is-toggle li.is-active a {
+  background-color: #00d1b2;
+  color: #051014;
+  /* lisible sur le bouton actif */
+  border-color: #00d1b2;
+}
+
+/* ===========================
+   PAGE CONTACT – SCOPÉE
+   =========================== */
+body.page-contact {
+  min-height: 100vh;
+  background: linear-gradient(180deg,
+      #050509 0%,
+      #0e141c 50%,
+      #27313d 100%);
+}
+
+/* on garde ton système : section padding global via mixin, pas besoin de le répéter */
+body.page-contact .contact {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body.page-contact .contact__wrapper {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+/* Card sombre, minimal, pleine largeur */
+body.page-contact .contact-card {
+  width: 100%;
+  background: rgba(14, 20, 28, 0.98);
+  border-radius: 0.75rem;
+  padding: $space-lg;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.page-contact .contact-card__header {
+  margin-bottom: $space-md;
+}
+
+body.page-contact .contact-card__title {
+  color: #fff;
+}
+
+/* Divider */
+body.page-contact .contact-card__divider {
+  margin: $space-lg 0;
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* Champs : minimal + lisible */
+body.page-contact .label {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.page-contact .input,
+body.page-contact .textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 0.75rem;
+}
+
+body.page-contact .input::placeholder,
+body.page-contact .textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+body.page-contact .input:focus,
+body.page-contact .textarea:focus {
+  border-color: rgba(0, 209, 178, 0.75);
+  box-shadow: 0 0 0 0.15rem rgba(0, 209, 178, 0.18);
+}
+
+/* Actions */
+body.page-contact .contact-form__actions {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  flex-wrap: wrap;
+}
+
+body.page-contact .contact-form__submit {
+  border-radius: 999px;
+  padding-inline: clamp(1.5rem, 3vw, 2.5rem);
+  padding-block: clamp(0.7rem, 1.4vw, 1rem);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-weight: 600;
+}
+
+/* Statut */
+body.page-contact .contact-form__status {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  opacity: 0.9;
+}
+
+/* Meta (email/tel/socials) */
+body.page-contact .contact-meta {
+  display: grid;
+  gap: $space-md;
+}
+
+body.page-contact .contact-meta__item {
+  display: grid;
+  gap: $space-xxs;
+}
+
+body.page-contact .contact-meta__label {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+body.page-contact .contact-meta__link {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// ===============================
+// 14. Modales Galerie Fullscreen (Style partagé)
+// ===============================
+
+.portfolio-project-modal {
+
+  // S'assure que le contenu est bien full width
+  .modal-content {
+    width: 100vw;
+    max-width: 100vw;
+    // Mobile : hauteur auto pour permettre le scroll de la page entière
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5) !important; // Fond noir 50%
+
+    // Desktop : hauteur fixe pour le split view
+    @media (min-width: 1024px) {
+      height: 100vh;
+      max-height: 100vh;
+      overflow-y: hidden;
+    }
+  }
+
+  // S'assure que l'overlay Bulma est aussi à 50% ou transparent
+  .modal-background {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  // Force la suppression du style carte/box par défaut (fond blanc)
+  .box {
+    padding: $space-lg;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    // Mobile : hauteur auto
+    height: auto;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      height: 100%;
+    }
+  }
+
+  // Layout principal
+  .modal-split-view {
+    display: flex;
+    flex-direction: column-reverse; // Mobile : texte en bas -> visuellement en HAUT car flex-direction inverse l'ordre
+    gap: $space-lg;
+    // Mobile : hauteur auto
+    height: auto;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      flex-direction: row; // Desktop : texte à DROITE
+      align-items: flex-start;
+      overflow: hidden; // Conteneur global fixe pour gérer le scroll
+      height: 100%;
+    }
+  }
+
+  // Wrapper Galerie (gauche)
+  .modal-gallery-wrapper {
+    flex: 1;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 1024px) {
+      height: 100%;
+      overflow-y: auto; // Scroll indépendant pour les images
+      padding-right: $space-md; // Espace avec la scrollbar
+
+      // Masquer scrollbar (optionnel)
+      &::-webkit-scrollbar {
+        width: 8px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+      }
+    }
+  }
+
+  // Sidebar Texte (droite)
+  .modal-sidebar {
+    width: 100%;
+    background: #0e141c; // Fond totalement opaque (assorti au thème du site)
+    padding: $space-md;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    @media (min-width: 1024px) {
+      width: 400px;
+      min-width: 350px;
+      height: 100%; // Prend toute la hauteur
+      overflow-y: auto; // Scroll indépendant pour le texte si trop long
+    }
+
+    .title {
+      font-weight: 800;
+      margin-bottom: $space-xs;
+      color: #fff;
+    }
+
+    .subtitle {
+      margin-bottom: $space-md;
+      opacity: 0.9;
+      color: var(--bulma-primary);
+    }
+
+    .content p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+  }
+
+  // Bouton fermer toujours visible
+  .modal-close {
+    position: fixed;
+    top: $space-md;
+    right: $space-md;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+// Grille Masonry pure CSS
+.shooting-masonry {
+  width: 100%;
+  column-count: 1; // Mobile first
+  column-gap: $space-md;
+
+  @media (min-width: 768px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 1200px) {
+    column-count: 3;
+  }
+
+  @media (min-width: 1600px) {
+    column-count: 4;
+  }
+
+  // L'item (une image)
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: $space-md;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: transparent !important; // S'assure de pas de fond blanc
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+// Grille Masonry pure CSS
+.shooting-masonry {
+  width: 100%;
+  column-count: 1; // Mobile first
+  column-gap: $space-md;
+
+  @media (min-width: 768px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 1024px) {
+    column-count: 3;
+  }
+
+  @media (min-width: 1440px) {
+    column-count: 4;
+  }
+
+  // L'item (une image)
+  .masonry-item {
+    break-inside: avoid; // Évite qu'une image soit coupée entre 2 colonnes
+    margin-bottom: $space-md; // Espacement vertical
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+
+    // Pour éviter le bug de whitespace en bas d'image dans certains cas
+    display: inline-block;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+
+
+// Variante 2 colonnes max (graphisme)
+.shooting-masonry--2col {
+  @media (min-width: 768px) {
+    column-count: 2 !important;
+  }
+
+  @media (min-width: 1200px) {
+    column-count: 2 !important;
+  }
+
+  @media (min-width: 1600px) {
+    column-count: 2 !important;
+  }
+}
+
+body.page-contact .contact-meta__socials {
+  display: flex;
+  gap: $space-xs;
+  flex-wrap: wrap;
+}
+
+body.page-contact .contact-meta__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: $space-xxs $space-sm;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.22);
+    color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  body.page-contact .contact-card {
+    padding: $space-md;
+  }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.site-footer {
+  margin-top: auto;
+}
+
+/* Fond full width + padding vertical égal */
+.site-footer .navbar.is-dark {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-block: clamp(2rem, 4vw, 3.5rem); // marge haut = bas
+}
+
+/* Container centré (contenu seulement) */
+.site-footer .footer-container {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: $section-padding-x;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Brand */
+.site-footer .navbar-brand {
+  margin-right: clamp(2rem, 4vw, 5rem);
+}
+
+.site-footer .footer-brand {
+  font-weight: 500;
+  font-size: clamp(0.95rem, 1vw, 1rem);
+  white-space: nowrap;
+}
+
+/* Layout des groupes */
+.site-footer .footer-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+/* Groupes */
+.site-footer .footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Titres (plus visibles, mais toujours sobres) */
+.site-footer .footer-group__title {
+  font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85; // 🔴 corrigé
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.4rem;
+}
+
+/* Liens classiques */
+.site-footer .footer-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(0.95rem, 1vw, 1rem);
+  text-decoration: none;
+  line-height: 1.4;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-footer .footer-container {
+    flex-direction: column;
+    gap: $space-lg;
+  }
+
+  .site-footer .navbar-brand {
+    margin-right: 0;
+  }
+
+  .site-footer .footer-layout {
+    flex-direction: column;
+    gap: $space-md;
+  }
+}
+
+/* ===========================
+   Sticky footer layout
+   =========================== */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Le main prend l’espace, ET porte le fond par défaut */
+.site-main {
+  flex: 1 0 auto;
+  background: linear-gradient(180deg,
+      #050509 0%,
+      #0e141c 50%,
+      #27313d 100%);
+}
+
+/* Footer */
+.site-footer {
+  flex-shrink: 0;
+}
