@@ -23399,8 +23399,8 @@ body.page-portfolio {
 .gallery-item__thumb--teal   { background: linear-gradient(135deg,#0f766e,#14b8a6); }
 
 @media (max-width: 640px) {
-  .gallery-filters ul { gap: 0.4rem; }
-  .gallery-filters a { font-size: 0.75rem; padding: 0.4rem 0.9rem; }
+  .gallery-filters ul { flex-direction: column; gap: 0.4rem; }
+  .gallery-filters a { font-size: 0.82rem; padding: 0.6rem 1rem; text-align: center; }
 }
 
 /* ═══════════════════════════════════════════════
