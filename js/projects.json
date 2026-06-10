@@ -1,5 +1,83 @@
 [
     {
+        "id": "super8",
+        "date": "2026-06-02",
+        "category": "photo",
+        "title": "Rêves tour X super8",
+        "subtitle": "photographie de concert",
+        "thumbnail": "../images/super8/DSC01212-2.webp",
+        "description": [
+            "Dans le cadre de mon stage chez Arobase Rap, j’ai réalisé la couverture photographique de la soirée organisée par Super8 et Rêves Partys à L’Étage, à Rennes.",
+            "Cet événement a réuni plusieurs artistes de la scène musicale émergente dans un cadre propice à la découverte et à la promotion de nouveaux talents. La soirée a permis de mettre en avant différents univers artistiques."
+        ],
+        "mediaFolder": "../images/super8/",
+        "media": [
+            "../images/super8/DSC01212-2.webp",
+            "../images/super8/DSC01296.webp",
+            "../images/super8/DSC01551.webp",
+            "../images/super8/DSC02161-2.webp",
+            "../images/super8/DSC02195.webp",
+            "../images/super8/DSC02497.webp",
+            "../images/super8/DSC03132-2.webp",
+            "../images/super8/DSC03518.webp",
+            "../images/super8/DSC03623-2.webp",
+            "../images/super8/DSC03778.webp",
+            "../images/super8/DSC03867.webp",
+            "../images/super8/DSC03880.webp",
+            "../images/super8/DSC04449.webp",
+            "../images/super8/DSC04700-2.webp",
+            "../images/super8/DSC04952.webp",
+            "../images/super8/DSC05152.webp"
+        ]
+    },
+    {
+        "id": "UBB",
+        "date": "2026-05-28",
+        "category": "photo",
+        "title": "Union Bordeaux Bègles",
+        "subtitle": "Le défilé en argentique",
+        "thumbnail": "../images/ubb/000027.webp",
+        "description": [
+            "J'ai réalisé la photographie du défilé célébrant le sacre européen de l’UBB Rugby, double championne d’Europe.",
+            "Cet événement a réuni les joueurs, le staff et de nombreux supporters dans les rues de Bordeaux afin de célébrer cette victoire historique. Les photographies ont été réalisées en argentique, offrant un rendu authentique et une approche documentaire de l’événement."
+        ],
+        "mediaFolder": "../images/ubb/",
+        "media": [
+            "../images/ubb/000010.webp",
+            "../images/ubb/000011.webp",
+            "../images/ubb/000012.webp",
+            "../images/ubb/000022.webp",
+            "../images/ubb/000027.webp",
+            "../images/ubb/000029.webp"
+        ]
+    },
+    {
+        "id": "firststep",
+        "date": "2026-05-26",
+        "category": "photo",
+        "title": "FIRST STEP",
+        "subtitle": "photographie de concert",
+        "thumbnail": "../images/firststep/DSC00198-3.webp",
+        "description": [
+            "En tant que stagiaire chez Arobase Rap, j’ai assuré la couverture photographique de la soirée FIRST STEP, organisée par les associations OG Asso et CTD Records aux Vivres de l’Art à Bordeaux.",
+            "Cet événement a réuni plusieurs artistes émergents de la scène rap locale, parmi lesquels Big Martyr, Sey, 160Zouka, 0bcess, OTN Alex et Nils LBE, dans un cadre dédié à la découverte et à la promotion de nouveaux talents."
+        ],
+        "mediaFolder": "../images/firststep/",
+        "media": [
+            "../images/firststep/DSC00030.webp",
+            "../images/firststep/DSC00053.webp",
+            "../images/firststep/DSC00143.webp",
+            "../images/firststep/DSC00198-3.webp",
+            "../images/firststep/DSC00683.webp",
+            "../images/firststep/DSC00907.webp",
+            "../images/firststep/DSC00982-2.webp",
+            "../images/firststep/DSC09713.webp",
+            "../images/firststep/DSC09755.webp",
+            "../images/firststep/DSC09844-Enhanced-NR.webp",
+            "../images/firststep/DSC09972.webp"
+        ]
+    },
+    {
         "id": "mondial_foot",
         "date": "2026-05-16",
         "category": "photo",
